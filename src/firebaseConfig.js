@@ -42,3 +42,6 @@ const app = initializeApp(firebaseConfig);
 // or signout operations (that's why we export it).
 // ---------------------------------------------------------
 export const auth = getAuth(app);
+import { getFirestore } from "firebase/firestore";
+//create fire store instance and export it for use in other parts of the app
+export const db = getFirestore(app);
