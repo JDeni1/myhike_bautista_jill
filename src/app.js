@@ -126,8 +126,9 @@ async function seedHikes() {
   }
 }
 
-// Call the seeding function when the main.html page loads.
+// Call the seeding function wen the main.html page loads.
 seedHikes();
+s;
 
 async function displayCardsDynamically() {
   let cardTemplate = document.getElementById("hikeCardTemplate");
@@ -146,6 +147,8 @@ async function displayCardsDynamically() {
       newcard.querySelector(".card-text").textContent =
         hike.details || `Located in ${hike.city}.`;
       newcard.querySelector(".card-length").textContent = hike.length;
+
+      newcard.querySelector(".card-image").src = `./images/${hike.code}.jpg`;
 
       // Attach the new card to the container
       document.getElementById("hikes-go-here").appendChild(newcard);
