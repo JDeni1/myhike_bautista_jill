@@ -32,7 +32,6 @@ async function displayHikeName(id) {
   }
 }
 
-//Add event listener to stars after DOM content is loaded
 // Add event listener to stars after DOM content is loaded
 // Add event listener to submit button after DOM content is loaded (It’s like the browser’s built-in bell that rings automatically.)
 document.addEventListener("DOMContentLoaded", () => {
