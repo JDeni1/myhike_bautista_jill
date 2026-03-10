@@ -128,7 +128,6 @@ async function seedHikes() {
 
 // Call the seeding function wen the main.html page loads.
 seedHikes();
-s;
 
 async function displayCardsDynamically() {
   let cardTemplate = document.getElementById("hikeCardTemplate");
@@ -148,7 +147,10 @@ async function displayCardsDynamically() {
         hike.details || `Located in ${hike.city}.`;
       newcard.querySelector(".card-length").textContent = hike.length;
 
+      //Addede this line
       newcard.querySelector(".card-image").src = `./images/${hike.code}.jpg`;
+      newcard.querySelector(".read-more").href =
+        `eachHike.html?docID=${doc.id}`;
 
       // Attach the new card to the container
       document.getElementById("hikes-go-here").appendChild(newcard);
